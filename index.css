@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 0%;
+}
+body{
+    background-color: black;
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+    transition: background-image 0.3s ease, color 0.3s ease;
+}
+header{
+    height: 100dvh;
+    background-color: rgba(0 , 0 , 0 , 0.5);   
+    overflow: hidden; 
+}
+header img{
+    width: 100dvw;
+    height: 100dvh;
+    object-fit: cover;
+    object-position: right;
+}
+nav{
+    height: 8dvh;
+    background-color: rgba(100 , 100 , 100 , 0.3);
+    backdrop-filter: blur(1em);
+    position: fixed;
+}
+nav kbd{
+    font-size: 0.5em;
+    background-color: transparent;
+}
+.myBtn i{
+    font-size: 1em;
+}
+.sideIcons{
+    width: 1.5em;
+    height: 92dvh;
+    top: 8dvh;
+    left: 0;
+    transform: translateX(-0.5em);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.sideIcons.view{
+    transform: translateX(0);
+    opacity: 1;  
+}
+.iconCont{
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.iconCont i{
+    font-size: 0.5em;
+    line-height: 1.5em;
+}
+
+/* Slider */
+/* Theme switch styles */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 0.8em;
+    height: 0.5em;
+}
+.theme-switch input {
+    display: none;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(204, 204, 204);
+    transition: background-color 0.4s;
+    border-radius: 0.85em;
+}
+.slider:before {
+    position: absolute;
+    content: "☀"; 
+    font-size: 0.4em;
+    width: 0.6em;
+    aspect-ratio: 1 / 1;
+    left: 0.1em;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    transition: transform 0.4s;
+    border-radius: 50%;
+    line-height: 1;
+}
+input:checked + .slider {
+    background-color: rgb(34, 34, 34);
+}
+input:checked + .slider:before {
+    transform: translate(0.4em , -50%);
+    background-color: rgb(0, 0, 0);
+    content: "🌙";
+    font-size: 0.4em;
+}
+/* Light theme */
+.light-theme {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+/* Dark theme */
+.dark-theme {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* Other section */
+.overshadowCont{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -80%);
+}
+.overshadowCont h1 {
+    font-size: 3.7em;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+    cursor: pointer;    
+    text-shadow: 
+        0px 0px 10px rgba(88, 82, 255, 0.731),
+        0px 0px 20px rgba(39, 39, 255, 0.7),
+        -3px 3px 5px rgba(0, 0, 0, 0.5),
+        3px -3px 5px rgba(35, 39, 255, 0.4);
+        letter-spacing: 0.05em;
+}
+.overshadowCont h1:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.section{
+    height: auto;
+    width: 94dvw;
+    background-color: transparent;
+    text-align: center;
+    letter-spacing: 0.15em;
+    margin: 0;
+}
+.section h1{
+    margin: 3em 0;
+    line-height: 2em;
+    /* text-shadow: 0px 0px 5px black; */
+}
+span {
+    display: inline-block;
+}
+.sectCont{
+    width: 90%;
+    margin: auto;
+    overflow-x: auto;
+}
+.lastShow{
+    bottom: 5%;
+}
+.lastShow h1{
+    font-size: 0.4em;
+}
+.listenBtn{
+    color: black;
+    border: 0.5px solid;
+    transition: transform 0.3s ease;
+}
+.listenBtn:active{
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+.linkBtn{
+    border-radius: 2em;
+    width: 15em;
+    aspect-ratio: 1 / 1.2;
+    transition: transform 0.3s ease;
+}
+.linkBtn:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 3em rgb(198, 198, 198);
+}
+.linkBtnOne{
+    background-image: url(DAMODOT.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: background-position 0.5s ease;
+    overflow: hidden;
+}
+.linkBtnOne:hover{
+    background-position: right;
+    transition: background-position 0.5s ease;
+}
+.linkBtnTwo{
+    background-image: url(IMG-3722.jpg);
+}
+.linkBtnThree{
+    background-image: url(Damn.jpg);
+}
+.linkBtnFour{
+    background-image: url(IMG_3128.jpeg);
+}
+.topPlay{
+    width: 6em;
+    aspect-ratio: 1 / 1;    
+    border-radius: 50%;
+    float: right;
+}
+.downName h1,
+.topPlay i{
+    font-size: 2em;
+    visibility: hidden;    
+}
+.topPlay i{
+    font-size: 5em;
+}
+.downName{
+    margin-top: 10em;
+    border-radius: 2em;
+    width: 100%;
+    height: 30%;
+}
+.linkBtnOne:hover .playVisible,
+.linkBtnOne:hover .wrdVisible{
+    visibility: visible;
+    transition: visibility 1s ease;
+}
+.undLabel{
+    font-size: 2em;    
+}
+
+
+
+
+
+
+/* Media Query */
+@media (max-width: 1200px) {
+    /* nav bar */
+    /* big Display */
+    .overshadowCont h1{
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 992px) {
+    /* nav bar */
+    /* big Display */
+    .overshadowCont h1{
+        font-size: 2.2em;   
+    }
+    .linkBtn{
+        width: 30em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* nav bar */
+    /* big Display */
+    .overshadowCont{
+        transform: translate(-50% , -60%);
+    }
+    .overshadowCont h1{
+        font-size: 3.3em;   
+    }
+}
+
+@media (max-width: 576px) {
+    /* nav bar */
+    /* big Display */
+    .overshadowCont h1{
+        font-size: 1.7em;   
+    }
+    .linkBtn{
+        width: 80dvw;
+    }
+}
