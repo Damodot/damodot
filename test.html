@@ -3,60 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Text</title>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <title>Play Button</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Reset styling */
         body {
-            font-weight: 400;
-            font-size: 2vw;
             display: flex;
-            align-items: center;
             justify-content: center;
-            text-align: center;
-            height: auto;
-            letter-spacing: 6px;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            line-height: 1.2;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
 
-        span {
-            display: inline-block;
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: #1db954; /* Spotify green for a music feel */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
         }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+        }
+
     </style>
 </head>
 <body>
-    <div>
-        <h1 class="animate-me">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum facere eveniet illum minus voluptate eos quibusdam reiciendis at corrupti consectetur? Dolor error nam, quidem non ipsam ab nihil expedita accusantium?</h1>
+    <div class="play-button">
+        <div class="triangle"></div>
     </div>
-    <script type="module">
-        import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
-
-        let test = new Letterize({
-            targets: ".animate-me"
-        });
-
-        let animation = anime.timeline({
-            targets: test.listAll,
-            delay: anime.stagger(100, {
-                grid: [test.list[0].length, test.list.length],
-                from: "center"
-            }),
-            loop: true
-        });
-
-        animation
-            .add({
-                scale: 0.5
-            })
-            .add({
-                letterSpacing: "10px"
-            })
-            .add({
-                scale: 1
-            })
-            .add({
-                letterSpacing: "6px"
-            });
-    </script>
 </body>
 </html>

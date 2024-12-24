@@ -142,10 +142,22 @@ input:checked + .slider:before {
     letter-spacing: 0.15em;
     margin: 0;
 }
+.bigPics{
+    width: 15em;
+    aspect-ratio: 1 / 0.7;
+    background-image: url(DAMODOT.jpg);
+    background-position: right;
+    background-size: cover;
+    border: 0.3em solid white;
+    border-radius: 0.5em;
+}
+.whoDamo{
+    margin-top: 2em;
+    display: flex;
+}
 .section h1{
     margin: 3em 0;
     line-height: 2em;
-    /* text-shadow: 0px 0px 5px black; */
 }
 span {
     display: inline-block;
@@ -171,9 +183,9 @@ span {
     transition: transform 0.3s ease;
 }
 .linkBtn{
-    border-radius: 2em;
+    border-radius: 1.5em;
     width: 15em;
-    aspect-ratio: 1 / 1.2;
+    aspect-ratio: 1 / 1;
     transition: transform 0.3s ease;
 }
 .linkBtn:hover{
@@ -182,24 +194,20 @@ span {
     box-shadow: 0 0 3em rgb(198, 198, 198);
 }
 .linkBtnOne{
-    background-image: url(DAMODOT.jpg);
+    background-image: url(IMG-9415.jpg);
     background-size: cover;
     background-position: center;
-    transition: background-position 0.5s ease;
+    transition: background-position 0.5s ease, transform 0.5s ease;
     overflow: hidden;
 }
-.linkBtnOne:hover{
-    background-position: right;
-    transition: background-position 0.5s ease;
-}
 .linkBtnTwo{
-    background-image: url(IMG-3722.jpg);
+    background-image: url(IMG_3189.jpg);
 }
 .linkBtnThree{
-    background-image: url(Damn.jpg);
+    background-image: url(soundCheck.jpg);
 }
 .linkBtnFour{
-    background-image: url(IMG_3128.jpeg);
+    background-image: url(Premium\ Vector\ _\ Hand\ drawn\ silhouette\ of\ raccoon.jpeg);
 }
 .topPlay{
     width: 6em;
@@ -207,10 +215,11 @@ span {
     border-radius: 50%;
     float: right;
 }
-.downName h1,
-.topPlay i{
+.playVisible,
+.wrdVisible{
     font-size: 2em;
-    visibility: hidden;    
+    visibility: hidden;
+    transition: visibility 0.3s ease;    
 }
 .topPlay i{
     font-size: 5em;
@@ -224,10 +233,53 @@ span {
 .linkBtnOne:hover .playVisible,
 .linkBtnOne:hover .wrdVisible{
     visibility: visible;
-    transition: visibility 1s ease;
+    transition: visibility 0.3s ease;
 }
 .undLabel{
     font-size: 2em;    
+}
+.portBtnLast{
+    border-radius: 50%;
+    width: 6.5em;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0.1em 0.1em 1em tomato;
+}
+.portBtnLast:hover{
+    box-shadow: 0 0 3em tomato;
+}
+.blueGlow:hover{
+    box-shadow: 0 0 3em rgb(45, 119, 255);
+}
+.yellowGlow:hover{
+    box-shadow: 0 0 3em rgb(183, 255, 0);
+}
+.purpleGlow:hover{
+    box-shadow: 0 0 3em rgb(247, 0, 255);
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+}
+footer a{
+    font-size: 0.3em;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;    
+}
+footer a:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    text-decoration: underline;
+    color: chartreuse;
+}
+footer kbd{
+    background-color: transparent;
+    font-size: 0.5em;
+    margin: 2em 0;
+    color: chartreuse;
 }
 
 
@@ -264,6 +316,27 @@ span {
     .overshadowCont h1{
         font-size: 3.3em;   
     }
+    .whoDamo{
+        display: block;
+    }
+    .bigPics{
+        width: 80%;
+        margin: auto;
+    }
+
+    /* footer */
+    footer{
+        flex-direction: column;
+    }
+    footer a{
+        line-height: 4em;
+    }
+    footer kbd{
+        margin: 2em 0 0 0;
+    }
+    .lastOne{
+        margin: 0 0 2em 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -274,5 +347,20 @@ span {
     }
     .linkBtn{
         width: 80dvw;
+    }
+    .portBtnLast:hover{
+        box-shadow: 0 0 3em tomato;
+    }
+    .blueGlow:hover{
+        box-shadow: 0 0 3em rgb(45, 119, 255);
+    }
+    .yellowGlow:hover{
+        box-shadow: 0 0 3em rgb(183, 255, 0);
+    }
+    .purpleGlow{
+        box-shadow: 0 0 3em rgb(247, 0, 255);
+    }
+    .portBtnLast{
+        box-shadow: 0 0 3em tomato;
     }
 }

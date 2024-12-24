@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 94%;
+}
+.listSide{
+    width: 25%;
+    height: 96dvh;
+    overflow-y: auto;
+}
+.listSide::-webkit-scrollbar{
+    width: 0;   
+}
+.inPlay{
+    width: 45%;
+    height: 96dvh;
+}
+.image{
+    width: 4em;
+    aspect-ratio: 1 / 1;
+    background-image: url(soundCheck.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.songName{
+    font-size: 1.3em;   
+}
+.imageTwo{
+    background-image: url(IMG_3189.jpg);
+}
+.imageThree{
+    background-image: url(Damn.jpg);
+}
+.imageFour{
+    background-image: url(IMG-9415.jpg);
+}
